@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.css'
 
 
 class Product extends React.Component {
@@ -39,23 +40,21 @@ class Product extends React.Component {
                         </div>
                         </a>                      
                     </div>
-                    <div>
                         <div className='description'>
-                       <a href={this.props.url}>
-                            <h1>{this.props.title}</h1>
-                        </a>
-                        <p>
-                            <h4>{this.props.desc}</h4>
-                        </p>
+                            <a href={this.props.url}>
+                                    <h1>{this.props.title}</h1>
+                                </a>
+                                <p>
+                                    <h4>{this.props.desc}</h4>
+                                </p>
                         </div>
                         <div className='extra'>
-                        <b><span>Submitted By : </span></b>
-                        {this.props.submittedby}&nbsp;
-                        <img  src={this.props.avatar} className='ui avatar image'/>
-                        </div>
+                            <b><span>Submitted By : </span></b>
+                            {this.props.submittedby}&nbsp;
+                            <img  src={this.props.avatar} className='ui avatar image'/>
+                            </div>
                     </div>
             </div>
-        </div>
             
         );
     }
