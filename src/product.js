@@ -29,22 +29,23 @@ class Product extends React.Component {
                     <div className='header'>
                         <a onClick={this.upVote}>
                         <div class="ui labeled button"><button class="ui red button" tabindex="0"><i aria-hidden="true" class="heart icon">
-                                </i> Like</button></div>
-                        </a>&nbsp;<div class="ui blue  pointing basic label">{this.props.vote}</div>&nbsp;
+                                </i> Like</button><div class="ui blue left pointing basic label">{this.props.upvote}</div></div>
+                        </a>&nbsp;&nbsp;
                         <a onClick={this.downVote}>
                         <div class="ui labeled button">
                                 <button class="ui blue basic button" tabindex="0">
                                 <i aria-hidden="true" class="heart icon"></i> Dislike</button>
+                                <div class="ui blue left pointing basic label">{this.props.downvote}</div>
                         </div>
                         </a>                      
                     </div>
                     <div>
                         <div className='description'>
                        <a href={this.props.url}>
-                        {this.props.title}
+                            <h1>{this.props.title}</h1>
                         </a>
                         <p>
-                            {this.props.desc}
+                            <h4>{this.props.desc}</h4>
                         </p>
                         </div>
                         <div className='extra'>

@@ -32,7 +32,7 @@ class ProductList extends React.Component {
        const nextProd=this.state.prod.map((product)=>{
         if(product.id == id){
             return Object.assign({},product,{
-                votes:parseInt(product.votes)+1,
+                uvotes:parseInt(product.uvotes)+1,
             });
         }else{
             return product;
@@ -48,7 +48,7 @@ class ProductList extends React.Component {
         const nextProd=this.state.prod.map((product)=>{
          if(product.id === id){
              return Object.assign({},product,{
-                 votes:parseInt(product.votes)-1,
+                 dvotes:parseInt(product.dvotes)+1,
              });
          }else{
              return product;
@@ -70,7 +70,8 @@ class ProductList extends React.Component {
                     desc={prod.description}
                     link={prod.link}
                     url={prod.url}
-                    vote={prod.votes}
+                    upvote={prod.uvotes}
+                    downvote={prod.dvotes}
                     submittedby={prod.submittedBy}
                     avatar={prod.avatar}
                     proUrl={prod.productUrl}
@@ -99,7 +100,8 @@ class ProductList extends React.Component {
                     desc={prod.description}
                     link={prod.link}
                     url={prod.url}
-                    vote={prod.votes}
+                    upvote={prod.uvotes}
+                    downvote={prod.dvotes}
                     submittedby={prod.submittedBy}
                     avatar={prod.avatar}
                     proUrl={prod.productUrl}
