@@ -60,35 +60,6 @@ class ProductList extends React.Component {
      });
      }
 
-    
-    render() { 
-        const productComponet = this.state.prod.map((prod) => (
-             <Product
-                    key={prod.id}
-                    id={prod.id}
-                    title={prod.title}
-                    desc={prod.description}
-                    link={prod.link}
-                    url={prod.url}
-                    upvote={prod.uvotes}
-                    downvote={prod.dvotes}
-                    submittedby={prod.submittedBy}
-                    avatar={prod.avatar}
-                    proUrl={prod.productUrl}
-                    onVote={this.upProdVote}
-                    deleteVote={this.downProdVote}>
-            </Product>
-        ))
-
-        return(
-            <div className='ui unstackable items'>
-            <h1 className="style">Movie Votes</h1>
-            {productComponet}
-            </div>
-        )
-    }
-
-
     render(){
         const prods = this.state.prod.sort((a,b)=>(
         b.uvotes-a.uvotes
